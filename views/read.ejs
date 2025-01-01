@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= story.title %> - Story Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body{
+        font-family: "Iceland", serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: rgb(51, 50, 50);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+    pre {
+      font-family: "Iceland", serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.2;
+      white-space: pre-wrap;
+      color: black;
+    }
+    a.update{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      border-radius: 50%;
+      box-shadow: 0px 1px 20px 10px aqua;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      color: black;
+      right: 30px;
+      font-size: 45px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a.back{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      border-radius: 50%;
+      box-shadow: 0px 1px 20px 10px aqua;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      font-size: 45px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= story.title %></h1>
+
+  <pre><%= story.content %></pre> <!-- Content will now display with all line breaks and spaces -->
+
+  <a class="update" href="/update/<%= story.id %>"><i class="fa-regular fa-circle-up"></i></a>
+  <a class="back" href="/"><i class="fa-regular fa-circle-left"></i></a>
+
+</body>
+</html>

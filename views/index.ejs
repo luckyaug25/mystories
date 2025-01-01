@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Story Website</title>
+  <style>
+    body {
+      background-color: rgb(51, 50, 50);
+      color: black;
+      font-family: "Iceland", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    h1{
+      text-align: center;
+    }
+    ul{
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+    }
+    li{
+      height: 25px;
+      width: 100%;
+      background-color: rgb(103, 103, 103);
+      color: black;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 10px;
+    }
+    a{
+      margin-left: 40px;
+      text-decoration: none;
+      color: black;
+    }
+    .write{
+      box-shadow: 0px 1px 20px 10px aqua;
+      font-size: 30px;
+      position: fixed;
+      bottom: 20px;
+      right: 40px;
+      color: black;
+      background-color: aqua;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 50%;
+    }
+    .pages{
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      margin-left: 35px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Stories</h1>
+
+  <h2>Recent Stories</h2>
+  <ul>
+    <% stories.forEach(story => { %>
+      <li>
+        <a href="/read/<%= story.id %>"><%= story.title %></a> <!-- Link to the full story page -->
+        <a href="/delete/<%= story.id %>" style="color: rgba(143, 4, 4, 0.768); margin-left: 10px;"><i class="fa-solid fa-trash"></i></a> <!-- Delete option -->
+      </li>
+    <% }) %>
+  </ul>
+
+  <div class="pages">
+    <% if (currentPage > 1) { %>
+      <a href="/?page=<%= currentPage - 1 %>"><i class="fa-solid fa-circle-arrow-left"></i></a> <!-- Previous page -->
+    <% } %>
+
+    <% if (currentPage < totalPages) { %>
+      <a href="/?page=<%= currentPage + 1 %>"><i class="fa-solid fa-circle-arrow-right"></i></a> <!-- Next page -->
+    <% } %>
+  </div>
+
+  <a class="write" href="/write"><i class="fa-solid fa-plus"></i></a>
+
+</body>
+</html>

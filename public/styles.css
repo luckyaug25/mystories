@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Iceland&family=Jaro:opsz@6..72&family=Marcellus&family=New+Rocker&family=Plaster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Yatra+One&display=swap');
+
+body {
+    background-color: rgb(51, 50, 50);
+    color: black;
+    font-family: "Iceland", serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  .iceland-regular {
+  font-family: "Iceland", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+  h1 {
+    color: #333;
+  }
+  
+  
+  form {
+    margin: 20px;
+  }
+  
+  input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  

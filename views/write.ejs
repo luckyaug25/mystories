@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write a Story</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: "Iceland", serif;
+      font-weight: 400;
+      font-style: normal;
+      background-color: rgb(51, 50, 50);
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+    }
+    h1{
+      text-align: center;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    input{
+      width: 95%;
+      height: 30px;
+      margin-bottom: 10px;
+      background-color: grey;
+    }
+    input::placeholder{
+      font-size: 25px;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      color: black; 
+      font-size: 16px; /* Font size */
+      font-family: 'Arial', sans-serif; /* Font family */
+      text-align: center; /* Center-aligned text */
+    }
+    textarea{
+      width: 95%;
+      height: 600px;
+      margin-bottom: 10px;
+      background-color: grey;
+      color: black;
+    }
+    button{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      border-radius: 50%;
+      box-shadow: 0px 1px 20px 10px aqua;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      color: black;
+      right: 30px;
+      font-size: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    i{
+      color: black;
+    }
+    a{
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      border-radius: 50%;
+      box-shadow: 0px 1px 20px 10px aqua;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      font-size: 45px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: aqua;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Write a Story</h1>
+  <form action="/write" method="POST">
+    <input type="text" name="title" placeholder="Title" required class="input">
+    <textarea name="content" placeholder="Your story..." required class="textarea"></textarea>
+    <button type="submit"><i class="fa-solid fa-circle-up"></i></button>
+  </form>
+  <a href="/"><i class="fa-solid fa-circle-left"></i></a>
+</body>
+</html>
