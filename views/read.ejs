@@ -12,10 +12,6 @@
         font-style: normal;
         background-color: rgb(51, 50, 50);
         color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 95%;
     }
     pre {
@@ -63,7 +59,7 @@
   </style>
 </head>
 <body>
-  <h1><%= story.title %></h1>
+  <h1 style="text-align:center;"><%= story.title %></h1>
 
   <pre><%= story.content %></pre> <!-- Content will now display with all line breaks and spaces -->
 
